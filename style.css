@@ -1,0 +1,139 @@
+/**
+Idea: annotate the resume with IPad hand drawings
+ */
+.dark body {
+  background-color: #0d1118;
+  color: white;
+  --primary-color: #1EFF78;
+  --secondary-color: #781EFF;
+  --ternary-color: #FF781E;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem;
+}
+
+header img {
+  width: 15rem;
+  margin-block: auto;
+
+}
+header h1 {
+  margin-bottom: 0;
+}
+header h2 {
+  margin-top: 0;
+}
+
+body {
+
+  --primary-color: #1EFF78;
+  --secondary-color:#FF781E ;
+  --ternary-color: #FF24B1;
+  /*--ternary-color: #781EFF;*/
+
+  font-size: 1.2rem;
+  min-height: 100vh;
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.content {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 55rem;
+}
+
+.resume {
+  font-size: 1.5rem;
+}
+
+h1, h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 5rem;
+}
+
+h1 i {
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+p {
+  margin-top: 0.5rem;
+}
+
+
+.code {
+  font-family: "Sono", sans-serif;
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+
+.text-bg-primary {
+  background-color: var(--primary-color);
+  padding-inline: 1rem;
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.bold {
+  background-color: var(--primary-color);
+  font-weight: bold;
+}
+
+p {
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+}
+
+.experience {
+  margin-top: 2rem;
+  border-top: solid 1px #000;
+}
+
+.experience h1 {
+  margin-bottom: 0;
+  margin-top: 0.5rem;
+  position: relative;
+  font-size: 2.5rem;
+}
+
+.experience h1 i {
+  font-size: 1.2rem;
+}
+
+.experience h2 {
+  position: relative;
+  font-size: 1.5rem;
+  padding-left: 1rem;
+}
+.experience p {
+  padding-left: 2rem;
+}
+
+.experience p:first-of-type {
+  padding-left: 0rem;
+}
+
+.date {
+  /*color: var(--ternary-color);*/
+  font-size: 1.3rem;
+  font-family: "Montserrat", sans-serif;
+  right: 0;
+  position: absolute;
+  bottom: 0;
+}
