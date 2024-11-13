@@ -9,6 +9,7 @@ header {
 header .header-image {
   position: relative;
   display: flex;
+  flex-direction: column;
   margin-inline-end: var(--sidebar-margin-inline-end);
   margin-inline-start: var(--sidebar-margin-inline-start);
   align-items: center;
@@ -26,6 +27,7 @@ header .header-image {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-inline: var(--sidebar-padding-inline);
 }
 
 .header-text h1 {
@@ -43,7 +45,7 @@ a:visited {
 }
 
 body {
-  max-inline-size: 120rem;
+  max-inline-size: 110rem;
   margin-inline: auto;
   font-size: var(--font-normal);
   min-block-size: 100vh;
@@ -66,7 +68,7 @@ main {
   min-inline-size: var(--sidebar-inline-size);
   margin-inline-start: var(--sidebar-margin-inline-start);
   border-block-start: solid;
-  background-color: #F2FFF2;
+  background-color: var(--light-background);
 }
 .content {
   padding-block-start: var(--sidebar-padding-block-start);
@@ -107,6 +109,7 @@ p {
 
 .code {
   font-family: "Sono", sans-serif;
+  font-weight: 400;
 }
 
 .text-primary {
@@ -128,7 +131,7 @@ section {
 }
 
 .content section {
-  margin-block-end: var(--space-xl-with-date)
+  margin-block-end: var(--space-xl);
 }
 
 .experience {
@@ -177,47 +180,71 @@ section {
 .date {
   position: absolute;
   inset-inline-start: 0;
-  inset-block-end: var(--font-xl);
-  font-size: var(--font-m);
-  /* TODO chose a font and remove the commented one */
-  /*font-family: "Montserrat", sans-serif;*/
+  inset-block-start: 0.5rem;
+  font-size: var(--font-sm);
   font-family: "Sono", sans-serif;
+  font-weight: 500;
   inline-size: 100%;
   text-align: center;
+}
+
+.contact {
+  text-align: center;
+  font-size: var(--font-sm);
+  margin-block-start: 1rem;
+  margin-block-end: 0;
+}
+
+.contact a {
+  font-size: var(--font-l);
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.technologies {
+  font-size: var(--font-normal);
+  display: flex;
+  flex-direction: row;
+}
+.technologies span {
+  background-color: var(--light-background);
+}
+
+.technologies h3 {
+  padding-inline-end: 0.5rem;
 }
 
 /* ------ RESPONSIVE ------ */
 
 body {
   --primary-color: #1eff78;
-  --secondary-color: #ff781e;
-  --ternary-color: #ff24b1;
+  --light-background: #F4F4F4;
 
   --font-xxl: 3.5rem;
   --font-xl: 2.2rem;
   --font-l: 1.5rem;
   --font-m: 1.2rem;
+  --font-sm: 1.1rem;
   --font-normal: 1rem;
 
   --space-xl: 4rem;
-  --space-xl-with-date: calc(var(--space-xl) + 2rem);
 
   --header-padding-block: 3rem;
-  --header-text-padding-inline: 3rem;
 
   --sidebar-inline-size: 100%;
   --sidebar-margin-inline-start: 0;
   --sidebar-margin-inline-end: 0rem;
-  --sidebar-padding-inline: 2rem;
-  --sidebar-padding-block-start: 1rem;
+  --sidebar-padding-inline: 1.5rem;
+  --sidebar-padding-block-start: 0.5rem;
+}
+
+.experience h1 {
+  padding-top: 2rem;
 }
 
 @media screen and (min-width: 900px), print {
   body {
-    --primary-color: #1eff78;
-    --secondary-color: #ff781e;
-    --ternary-color: #ff24b1;
-
     --font-xxl: 4.5rem;
     --font-xl: 2.7rem;
     --font-l: 2rem;
@@ -226,7 +253,7 @@ body {
 
     --sidebar-inline-size: 17rem;
     --sidebar-margin-inline-start: 1rem;
-    --sidebar-margin-inline-end: 2rem;
+    --sidebar-margin-inline-end: 1rem;
   }
 
   main {
@@ -240,10 +267,6 @@ body {
     text-align: start;
   }
 
-  header .header-text {
-    padding-inline: var(--header-text-padding-inline);
-  }
-
   .header-image img {
     inline-size: 100%;
   }
@@ -254,76 +277,85 @@ body {
   }
 }
 
-@media print {
-  body {
-
-    --header-padding-block: 1.2rem;
-    --header-text-padding-inline: 1rem;
-
-    --sidebar-margin-inline-start: 0.5rem;
-    --sidebar-margin-inline-end: 0.8rem;
-    --sidebar-padding-block-start: 0.5rem;
-    --sidebar-padding-inline: 0.8rem;
-
-    --sidebar-inline-size: 14rem;
-    --font-xxl: 3.3rem;
-    --font-xl: 2rem;
-    --font-l: 1.5rem;
-    --font-m: 1.2rem;
-    --font-normal: 1rem;
-
-
-    --space-xl: 3.5rem;
-    --space-xl-with-date: calc(var(--space-xl) + 2rem);
-
-  }
-
-  p {
-    orphans: 3;
-    widows: 3
-  }
-  h1, h2, h3, h4, .date {
-    page-break-after:avoid;
-    break-after: avoid;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   body {
     --sidebar-inline-size: 25rem;
     --sidebar-margin-inline-end: 2rem;
-    --space-xl-with-date: var(--space-xl);
-  }
-  .date {
-    position: absolute;
-    font-size: var(--font-normal);
-    inset-inline-start: inherit;
-    inset-inline-end: 0;
-    inset-block-end: 0;
-    inline-size: auto;
-    text-align: right;
   }
 }
 
 @media screen and (min-width: 1800px) {
   body {
-    --primary-color: #1eff78;
-    --secondary-color: #ff781e;
-    --ternary-color: #ff24b1;
-
     --sidebar-inline-size: 30rem;
 
-
     --space-xl: 5rem;
+    --font-xxl: 6rem;
+    --font-xl: 3.5rem;
+    --font-sm: 1.3rem;
+  }
+}
 
-    --font-xxl: 7rem;
-    --font-xl: 4rem;
-    --font-l: 3.3rem;
-    --font-m: 2rem;
-    --font-normal: 1.2rem;
+@media print {
+  body {
+    --header-padding-block: 1rem;
+    --sidebar-margin-inline-start: 0rem;
+    --sidebar-margin-inline-end: 0.8rem;
+    --sidebar-padding-block-start: 0rem;
+    --sidebar-padding-inline: 0.7rem;
+    --sidebar-inline-size: 12rem;
+
+    --font-xxl: 2.5rem;
+    --font-xl: 1.8rem;
+    --font-l: 1.2rem;
+    --font-m: 1rem;
+    --font-normal: 0.8rem;
+
+    --space-xl: 2.8rem;
   }
 
+
+  main {
+    margin-block-start: 1.5rem;
+  }
+
+  .sidebar {
+    border-block: none;
+    border-inline-start: none;
+    padding-inline-start: 0;
+    border-inline-end-width: 1px;
+    padding-block-end: 0;
+  }
+
+  .sidebar section:last-of-type {
+    margin-block-end: 0;
+  }
+
+  .content {
+    padding-inline-end: 0;
+  }
+  .contact {
+    font-size: var(--font-normal);
+  }
+
+  section {
+    orphans: 4;
+    widows: 3;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
   .date {
-    font-size: var(--font-m);
+    page-break-after: avoid;
+    break-after: avoid;
   }
+
+  .technologies h3 {
+    page-break-after: auto;
+  }
+
+  .technologies {
+    margin-block-start: -0.2rem;
+  }
+
 }
