@@ -121,9 +121,9 @@ p {
   padding-inline: 1rem;
 }
 
-.bold {
+.highlight {
   background-color: var(--primary-color);
-  font-weight: bold;
+  font-weight: 600;
 }
 
 section {
