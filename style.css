@@ -1,9 +1,20 @@
 header {
+  text-align: center;
+  margin-block-end: var(--space-xl);
+  margin-block-start: 2rem;
+}
+
+.hero {
   display: flex;
   flex-direction: column;
   justify-content: left;
   align-items: center;
-  text-align: center;
+}
+
+header .contact {
+  margin-inline-end: var(--sidebar-margin-inline-end);
+  margin-inline-start: var(--sidebar-margin-inline-start);
+  padding-inline: var(--sidebar-padding-inline);
 }
 
 header .header-image {
@@ -45,10 +56,11 @@ a:visited {
 }
 
 body {
+  min-block-size: 100vh;
   max-inline-size: 110rem;
   margin-inline: auto;
+  margin-block-end: 0;
   font-size: var(--font-normal);
-  min-block-size: 100vh;
   font-family: "Inter", serif;
   font-optical-sizing: auto;
   font-weight: normal;
@@ -191,6 +203,8 @@ section {
 .contact {
   text-align: center;
   font-size: var(--font-sm);
+  inline-size: var(--sidebar-inline-size);
+  padding-inline: var(--sidebar-padding-inline);
   margin-block-start: 1rem;
   margin-block-end: 0;
 }
@@ -219,7 +233,7 @@ section {
 
 body {
   --primary-color: #1eff78;
-  --light-background: #F4F4F4;
+  --light-background: #f4f4f4;
 
   --font-xxl: 2.8rem;
   --font-xl: 1.5rem;
@@ -254,6 +268,7 @@ body {
     --sidebar-inline-size: 17rem;
     --sidebar-margin-inline-start: 1rem;
     --sidebar-margin-inline-end: 1rem;
+    margin-block-end: 1rem;
   }
 
   main {
@@ -261,10 +276,18 @@ body {
   }
 
   header {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: start;
+    align-items: start;
+    padding-block-end: var(--header-padding-block);
+    margin-block-end: 0;
+  }
+
+  .hero {
     justify-content: left;
     flex-direction: row;
-    padding-block: var(--header-padding-block);
-    text-align: start;
   }
 
   .header-image img {
@@ -280,6 +303,7 @@ body {
 @media screen and (min-width: 1200px) {
   body {
     --font-xxl: 6rem;
+    --font-xl: 3.5rem;
     --space-xl: 5rem;
     --sidebar-inline-size: 25rem;
     --sidebar-margin-inline-end: 2rem;
@@ -314,7 +338,6 @@ body {
 
     --space-xl: 2.8rem;
   }
-
 
   main {
     margin-block-start: 1.5rem;
@@ -359,5 +382,4 @@ body {
   .technologies {
     margin-block-start: -0.2rem;
   }
-
 }
