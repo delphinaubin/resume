@@ -221,8 +221,8 @@ body {
   --primary-color: #1eff78;
   --light-background: #F4F4F4;
 
-  --font-xxl: 3.5rem;
-  --font-xl: 2.2rem;
+  --font-xxl: 2.8rem;
+  --font-xl: 1.5rem;
   --font-l: 1.5rem;
   --font-m: 1.2rem;
   --font-sm: 1.1rem;
@@ -232,7 +232,7 @@ body {
 
   --header-padding-block: 3rem;
 
-  --sidebar-inline-size: 100%;
+  --sidebar-inline-size: auto;
   --sidebar-margin-inline-start: 0;
   --sidebar-margin-inline-end: 0rem;
   --sidebar-padding-inline: 1.5rem;
@@ -279,6 +279,8 @@ body {
 
 @media screen and (min-width: 1200px) {
   body {
+    --font-xxl: 6rem;
+    --space-xl: 5rem;
     --sidebar-inline-size: 25rem;
     --sidebar-margin-inline-end: 2rem;
   }
@@ -288,8 +290,8 @@ body {
   body {
     --sidebar-inline-size: 30rem;
 
-    --space-xl: 5rem;
     --font-xxl: 6rem;
+    --space-xl: 5rem;
     --font-xl: 3.5rem;
     --font-sm: 1.3rem;
   }
