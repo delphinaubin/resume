@@ -20,7 +20,6 @@ header .contact {
 header .header-image {
   position: relative;
   display: flex;
-  flex-direction: column;
   margin-inline-end: var(--sidebar-margin-inline-end);
   margin-inline-start: var(--sidebar-margin-inline-start);
   align-items: center;
